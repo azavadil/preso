@@ -1,0 +1,10 @@
+void recPerm(string sofar, string rest){ 
+  if( rest.length() == 0 ) { 
+    cout << sofar << endl; // cout == console.log(); 
+  } else { 
+    for(var i = 0; i < rest.length(); i++){ 
+      string remaining = rest.substr(0,i) + rest.substr(i+1); 
+      recPerm(sofar + rest[i], remaining); 
+    } 
+  } 
+} 
